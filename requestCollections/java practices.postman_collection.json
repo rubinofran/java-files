@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "ad6c2bb7-3141-4d6a-bd9f-d64a879c5083",
+		"name": "java practices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19951513"
+	},
+	"item": [
+		{
+			"name": "file1",
+			"item": [
+				{
+					"name": "get1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{prot}}://{{server}}:{{port}}/file1/controller-route/Hello",
+							"protocol": "{{prot}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"file1",
+								"controller-route",
+								"Hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{prot}}://{{server}}:{{port}}/file1/controller-route/?var=Hello",
+							"protocol": "{{prot}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"file1",
+								"controller-route",
+								""
+							],
+							"query": [
+								{
+									"key": "var",
+									"value": "Hello"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "file2",
+			"item": [
+				{
+					"name": "get1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{prot}}://{{server}}:{{port}}/file2/rest-controller-route/Hello",
+							"protocol": "{{prot}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"file2",
+								"rest-controller-route",
+								"Hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{prot}}://{{server}}:{{port}}/file2/rest-controller-route/?var=Hello",
+							"protocol": "{{prot}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"file2",
+								"rest-controller-route",
+								""
+							],
+							"query": [
+								{
+									"key": "var",
+									"value": "Hello"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"key1\":\"Hello\",\r\n    \"key2\":\"World\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{prot}}://{{server}}:{{port}}/file2/rest-controller-route/add",
+							"protocol": "{{prot}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"file2",
+								"rest-controller-route",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
