@@ -1,0 +1,12 @@
+server:
+  port: 8010
+  servlet:
+    context-path: /file3
+
+# new
+spring:
+  mvc:
+    contentnegotiation:
+      favor-parameter: true
+      media-types:
+        pdf: application/pdf

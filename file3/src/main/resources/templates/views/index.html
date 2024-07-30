@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>MVC</h1>
-    <span th:text="${helloWorld}"></span>
+    <h1>List</h1>
+    <ul>
+        <li th:each="item: *{list}" th:text="${item}">Item description here...</li>
+    </ul>
 </body>
 </html>
