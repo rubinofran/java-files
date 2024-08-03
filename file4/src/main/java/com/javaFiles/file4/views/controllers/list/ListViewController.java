@@ -21,23 +21,22 @@ public class ListViewController {
     
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    private String [] names = {"This", "List", "Is to export", "As PDF"};
+    private String [] names = {"This", "List", "Is to view", "By console"};
     private List<String> myList = Arrays.asList(names);
 
     // In browser: http://localhost:8010/file4/view/list/index
     @RequestMapping(value = "/view/list/index", method = RequestMethod.GET)
     public String getView(Model model) {
         
-        logger.info("\n\nAccessing the view ... index\n");
+        logger.info("\n\nAccessing the view list index\n");
 
         model.addAttribute("list", myList);
 
         return "/views/list/index"; 
     }
 
-
-    @RequestMapping(value = "/view/list/generatePdf", method = RequestMethod.POST)
-    public ResponseEntity<?> createPdf() {
+    @RequestMapping(value = "/view/list/viewByConsole", method = RequestMethod.POST)
+    public ResponseEntity<?> viewByConsole() {
         Map<String, Object> outcome = new HashMap<>();
 
         /* some validations */

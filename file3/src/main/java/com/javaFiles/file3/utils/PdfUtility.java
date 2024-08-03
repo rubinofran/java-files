@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @Component("/views/index")
-public class PdfUtil extends AbstractPdfView {
+public class PdfUtility extends AbstractPdfView {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
