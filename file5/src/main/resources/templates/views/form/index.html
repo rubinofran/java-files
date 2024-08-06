@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org"> <!-- xmlns to use thymeleaf -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILE5</title>
+</head>
+<body>
+    <h1 th:text="${title}">asd</h1>
+    <form id="form-id" 
+        th:method="post" 
+        action="#"
+        role="form" > <!-- th:object="${form}" VER -->
+        <label for="name-id">Name:</label>
+        <input id="name-id" type="text">
+        <br><br>
+        <label for="age-id">Age:</label>
+        <input id="age-id" type="number" min="0" step="1">
+        <br><br>
+        <button id="btn-click" type="button">Click OK</button>
+        <button id="btn-submit" type="submit">Submit OK</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script th:inline="javascript" th:src="@{/js/views/form-view-controller.js}"></script>
+</body>
+</html>
